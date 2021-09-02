@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Medicamentos</title>
+    <link rel="stylesheet" href="css-reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <h1 class="titulo-principal">Calculadora de Medicamentos</h1>
+            <nav class="cabecalho-nav">
+                <a class="cabecalho-nav-item" href="#">Início</a>
+				<a class="cabecalho-nav-item" href="Manual.pdf">Manual</a>
+                <a class="cabecalho-nav-item" href="#">Sair</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="container">
+            <form>
+                    <div class="medicamento-marca">
+                        <fieldset>
+                            <legend>Informe o medicamento</legend>
+                            <select>
+                                <option>Ampicilina</option>
+                                <option>Aciclovir</option>
+                                <option>Azitromicina</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Informe marca</legend>
+                            <select>
+                                <option>Cilinon - Ariston/Blau</option>
+                                <option>Ampicilina Sódica - Teuto Bras</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Informe apresentação</legend>
+                            <select>
+                                <option>500mg FR/AMP</option>
+                                <option>1000mg FR/AMP</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div class="quantidade">    
+                        <fieldset class="fieldset-quantidade">
+                            <label for="quantidade">Informe a quantidade (em mg)</label>
+                            <input type="number" id="quantidade" required>
+                        </fieldset>
+                        <fieldset class="fieldset-quantidade">
+                            <label for="radio-iv"><input type="radio" value="iv" id="radio-iv" name="option" required> Intravenoso</label>
+                            <label for="radio-im"><input type="radio" value="im" id="radio-im" name="option" required> Intramuscular</label>                        
+                        </fieldset>
+                    </div>
+                <input type="submit" value="Calcular" class="botao">
+            </form>
+
+            <section>
+                <div class="resultados">        
+                    <div class="diluicao-rediluicao">
+                        <div class="diluicao">
+                            <p class="titulo-resultados"> Diluição </p>
+                            <p class="texto-resultado">Diluir o pó com 2 ml e misturar</p>
+                        </div>
+                        <div class="rediluicao">
+                            <p class="titulo-resultados"> Rediluição </p>
+                            <p class="texto-resultado">Em seringa de 20ml: aspirar 2 ml do pó diluído e completar com 18 ml SF</p>
+                        </div>
+                    </div class="dosagem"> 
+                                        
+                    <p class="titulo-dosagem">Dosagem</p> 
+                    <p class="dosagem-resultado">5,34 ml</p>
+                    
+                    <p class="info-adicional"> <strong>Informação adicional</strong>: É necessário adicionar permeabilização ao resultado.</p>
+                </div>
+                        
+            </section>
+                <div class="botoes-finais">
+                    <input type="submit" value="Novo Cálculo" class="botoes">
+                    <input type="submit" value="Imprimir" class="botoes">
+                </div>  
+        </div>
+    </main>
+    <hr>
+    <footer class="rodape">   
+        <div>
+            <p class="parceria">Aplicação desenvolvida em parceria entre:</p>
+        </div>
+        <div class="logos">
+            <img src="logo-compasso.png" alt="logo da compasso uol" class="footer-item">
+            <img src="logo-hsc.png" alt="logo do hospital santa cruz" class="footer-item">
+            <img src="logo-unisc.png" alt="logo da unisc" class="footer-item">
+        </div>
+    </footer>
+</body>
+</html>
